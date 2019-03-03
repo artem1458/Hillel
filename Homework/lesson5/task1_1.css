@@ -1,0 +1,68 @@
+body {
+    font-family: Geneva, Arial, Helvetica, sans-serif;
+}
+
+form {
+    display: inline-block;
+}
+
+.labels {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.labels label {
+    color: #f4ef24;
+    display: block;
+    text-align: right;
+    margin: 30px 0;
+}
+
+.labels label:first-child {
+    margin-top: 22px;
+}
+
+.inputs-group > label {
+    color: #f4ef24;
+}
+
+input {
+    display: block;
+}
+.inputs-group input {
+    display: inline;
+}
+
+.inputs-gender {
+    margin: 21px 0;
+}
+
+.inputs-gender input{
+    margin: 0;
+}
+
+form > div {
+    display: inline-block;
+}
+
+.inputs > input, select[name="country"] {
+    height: 32px;
+    width: 325px;
+    padding: 0 0 0 13px;
+    border: 1px solid #cacdd6;
+    border-radius: 5px;
+    margin: 15px 0;
+}
+
+select[name="country"] {
+    width: 340px;
+    margin: 0;
+}
+
+.inputs-group select {
+    height: 32px;
+    margin-right: 10px;
+    border: 1px solid #cacdd6;
+    border-radius: 5px;
+}
+

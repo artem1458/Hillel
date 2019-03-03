@@ -1,0 +1,108 @@
+body {
+    font-family: Arial, Helvetica, sans-serif
+}
+
+.checkout {
+    display: inline-block;
+    border: 1px solid #ddd;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+}
+
+.checkout-header,
+.checkout-footer {
+    width: 595px;
+    height: 64px;
+    border-bottom: 1px solid #ddd;
+    background-color: #444;
+    color: #fff;
+    font-size: 23px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkout-footer {
+    height: 74px;
+    margin-top: 21px;
+    justify-content: left;
+    position: relative;
+    border: none;
+    border-top: 1px solid #ddd;
+}
+
+em {
+    color: red;
+}
+
+.checkout label {
+    display: block;
+}
+
+input,
+select {
+    font-size: 15px;
+    padding: 0 0 0 14px;
+    width: 388px;
+    height: 37px;
+    color: #666;
+    border: 1px solid #e5e5e5;
+    background: linear-gradient(to top, #fff, #eee);
+    box-shadow: 0px 0px 4px 4px rgba(248, 248, 248, 0.75);
+}
+
+select {
+    padding-left: 10px;
+    width: 404px;
+    height: 39px;
+}
+
+.checkout-inputs {
+    margin: 22px 0 0 30px;
+}
+
+.checkout-inputs>.product {
+    margin-top: 15px;
+}
+
+label {
+    margin-bottom: 4px;
+}
+
+.checkout-inputs>div {
+    margin-top: 14px;
+}
+
+.checkout-footer input {
+    font-size: 14px;
+    height: 33px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background: none;
+    box-shadow: none;
+    padding: 0;
+    background-color: #e3e3e3;
+    color: #333;
+    font-weight: bold;
+    text-align: center;
+    transition: 0.2s;
+}
+
+.checkout-footer>div {
+    position: absolute;
+    left: 30px;
+}
+
+.checkout-submit {
+    width: 100px;
+}
+
+.checkout-submit:hover,
+.checkout-reset:hover {
+    background-color: #333;
+    color: #e3e3e3;
+}
+
+.checkout-reset {
+    width: 92px;
+}

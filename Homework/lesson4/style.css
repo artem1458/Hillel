@@ -1,8 +1,12 @@
 body {
-    background-color: #aaa;
-    font-family: Geneva, Arial, Helvetica, sans-serif;
     margin: 0;
+    font-family: Geneva, Arial, Helvetica, sans-serif;
+    background-color: #aaa;
     line-height: 1;
+}
+
+h1, h2, h3 {
+    margin: 0;
 }
 
 a {
@@ -10,70 +14,115 @@ a {
 }
 
 a:hover {
-    color: #7ffd69;
+    color: #70dd5c;
 }
 
-h1, h2, h3 {
+p {
     margin: 0;
 }
 
 .page {
-    height: 674px;
-    width: 990px;
     margin: 3px auto 0 auto;
-    background-color: #e5e5e5;
+    width: 990px;
+    min-height: 675px;
     border: 1px solid #119911;
-    white-space: nowrap;
+    background-color: #e5e5e5;
 }
 
-.header-image-wrap::before {
+.header-img img{
+    vertical-align: bottom;
+}
+
+.header-img::before {
     content: '';
     display: block;
     height: 27px;
-    width: 100%;
-    background: linear-gradient(to top, #b9b9b9, #dddddd )
+    box-shadow: inset 0px -6px 15px 0px rgba(0,0,0,0.2);
 }
 
-.header-image-wrap::after {
+.header-img::after {
     content: '';
     display: block;
-    height: 12px;
-    width: 100%;
-    background: linear-gradient(to top, #b0b0b0, #e5e5e5 )
+    height: 13px;
+    box-shadow: inset 0px -2px 10px 0px rgba(0,0,0,0.35);
+}
+
+.page-body-wrap {
+    position: relative;
 }
 
 .sidebar {
     display: inline-block;
-    width: 190px;
-    box-sizing: border-box;
+    width: 198px;
+    height: 400px;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
-.content-wrap {
+.content {
     display: inline-block;
-    width: 800px;
-    box-sizing: border-box;
-    vertical-align: top;
-
-}
-.sidebar ul {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 0 24px;
+    width: 792px;
+    height: 400px;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
-.sidebar li {
-    margin-top: 16px;
-    height: 1em;
+.sidebar nav {
+    margin: 23px 0 0 25px;
 }
 
-.sidebar ul a {
+.sidebar p {
+    margin-top: 12px;
+}
+
+.sidebar a {
     text-decoration: none;
+    font-size: 18px;
+    font-weight: 400;
 }
 
-.content-wrap h1 {
+.greet {
     margin-top: 4px;
 }
 
-.thanks {
-    width: 460px;
+.greet p:first-of-type {
+    margin: 28px 0 22px 0;
+}
+
+.instruction {
+    margin-top: 30px;
+}
+
+.instruction ol {
+    margin: 26px 0 0 19px;
+    padding: 0;
+    line-height: 1.2;
+}
+
+.instruction ol li:first-child {
+    font-style: italic;
+}
+
+.instruction ol li:nth-child(2) {
+    font-weight: bold;
+}
+
+.instruction ol li:nth-child(3) {
+    text-transform: uppercase;
+}
+
+.license {
+    margin-top: 25px;
+    line-height: 1.2;
+}
+
+.license p{
+    margin-top: 23px;
+    max-width: 735px;
+}
+.license-signature {
+    display: inline-block;
+    margin-top: 18px;
 }

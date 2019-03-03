@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>task2</title>
+    <link rel="stylesheet" href="task2.css">
+</head>
+
+<body>
+    <form action="#" class="checkout">
+        <div class="checkout-header">
+            <span>Форма оформления заказа</span>
+        </div>
+
+        <div class="checkout-inputs">
+
+            <div>
+                <label for="name">ФИО: <em>*</em></label>
+                <input type="text" id="name" required>
+            </div>
+
+            <div>
+                <label for="email">E-mail: <em>*</em></label>
+                <input type="email" id="email" required>
+            </div>
+
+            <div>
+                <label for="phone">Телефон:</label>
+                <input type="tel" id="phone">
+            </div>
+
+            <div class="product">
+                <label for="product">Наименование товара: <em>*</em></label>
+                <select name="product" id="product" required>
+                    <option value="1">Товар №1</option>
+                    <option value="2">Товар №2</option>
+                    <option value="3">Товар №3</option>
+                    <option value="4">Товар №4</option>
+                    <option value="5">Товар №5</option>
+                    <option value="6">Товар №6</option>
+                    <option value="7">Товар №7</option>
+                    <option value="8">Товар №8</option>
+                    <option value="9">Товар №9</option>
+                    <option value="10">Товар №10</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="amount">Количество: <em>*</em></label>
+                <input type="number" id="amount" required>
+            </div>
+
+            <div>
+                <label for="date">Дата доставки: <em>*</em></label>
+                <input type="text" id="date" required>
+            </div>
+        </div>
+
+        <div class="checkout-footer">
+            <div>
+                <input type="submit" value="Отправить" class="checkout-submit">
+                <input type="reset" value="Очистить" class="checkout-reset">
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>

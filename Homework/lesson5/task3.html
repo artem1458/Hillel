@@ -5,8 +5,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>task3</title>
+    <link rel="stylesheet" href="task3.css">
 </head>
 <body>
-    
+    <form action="#">
+        <div class="form-wrap">
+            <div class="form-header">
+                <h3>Форма тестирования</h3>
+            </div>
+
+            <div class="form-inputs">
+                <label for="name">Ваше имя: <em>*</em></label>
+                <input type="text" name="name" id="name" required>
+
+                <div>
+                    <label>Ваш возраст: <em>*</em></label>
+                    <div>
+                        <input type="radio" id="less20" name="age" value="less20" required>
+                        <label for="less20">до 20</label>
+                    </div>
+        
+                    <div>
+                        <input type="radio" id="20-30" name="age" value="20-30">
+                         <label for="20-30">от 20 до 30</label>
+                    </div>
+        
+                    <div>
+                        <input type="radio" id="30-40" name="age" value="30-40">
+                        <label for="30-40">от 30 до 40</label>
+                    </div>
+        
+                    <div>
+                        <input type="radio" id="40-50" name="age" value="40-50">
+                        <label for="40-50">от 40 до 50</label>
+                    </div>
+        
+                    <div>
+                        <input type="radio" id="more50" name="age" value="more50">
+                        <label for="more50">больше 50</label>
+                    </div>
+                </div>
+
+                <div>
+                    <label>Есть ли у Вас собственный сайт или блог: <em>*</em></label>
+                    <div>
+                        <input type="radio" id="blog-1" name="blog" value="1" required>
+                        <label for="blog-1">Да, есть</label>
+                    </div>
+            
+                    <div>
+                        <input type="radio" id="blog-2" name="blog" value="2">
+                        <label for="blog-2">Нет, но я планирую создать</label>
+                    </div>
+            
+                    <div>
+                        <input type="radio" id="blog-3" name="blog" value="3">
+                        <label for="blog-3">Нет, мне он не нужен</label>
+                    </div>
+                </div>
+
+                <div>
+                    <label>Есть ли у Вас аккаунт в одной или нескольких соц.сетях: 
+                        <em>*</em>
+                    </label>
+                    <div>
+                        <input type="checkbox" name="social" id="social1" value="social-1">
+                        <label for="social1">Одноклассники</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="social" id="social2" value="social-2">
+                        <label for="social2">Вконтакте</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="social" id="social3" value="social-3">
+                        <label for="social3">Facebook</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="social" id="social4" value="social-4">
+                        <label for="social4">Twitter</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="social" id="social5" value="social-5">
+                        <label for="social5">Google+</label>
+                    </div>
+                    <div class="social-own">
+                        <input type="checkbox" name="social" id="social6" value="social-6">
+                        <label for="social6">Свой вариант:</label>
+                        <input type="text">
+                    </div>
+                </div>
+            </div>
+            <input type="submit" value="Отправить" class="submit-btn">
+        </div>
+    </form>
 </body>
 </html>

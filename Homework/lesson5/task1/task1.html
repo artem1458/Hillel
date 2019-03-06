@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="task1.css">
+</head>
+<body>
+    <form action="#">
+        <div class="form-header">
+            <span>Sign Up</span>
+        </div>
+
+        <div class="labels-wrap">
+            <label for="name">First Name</label>
+            <label for="l-name">Last Name</label>
+            <label for="s-name">Screen Name</label>
+            <label for="month">Date of Birth</label>
+            <label for="">Gender</label>
+            <label for="country">Country</label>
+            <label for="email">E-mail</label>
+            <label for="phone">Phone</label>
+            <label for="pass">Password</label>
+            <label for="cpass">Confirm Password</label>
+        </div>
+
+        <div class="inputs-wrap">
+            <input type="text" id="name" class="input-elem text-input" placeholder="Enter First Name..." required minlength="3">
+            <input type="text" id="l-name" class="input-elem text-input" placeholder="Enter Last Name..." required minlength="3">
+            <input type="text" id="s-name" class="input-elem text-input" placeholder="Enter Screen Name...">
+            <div class="date-wrap input-elem">
+                <select name="month" id="month">
+                    <option value="0">January</option>
+                    <option value="1">February</option>
+                    <option value="2">March</option>
+                    <option value="3">April</option>
+                    <option value="4" selected>May</option>
+                    <option value="5">June</option>
+                    <option value="6">July</option>
+                    <option value="7">August</option>
+                    <option value="8">September</option>
+                    <option value="9">October</option>
+                    <option value="10">November</option>
+                    <option value="11">December</option>
+                </select>
+    
+                <select name="day" id="date">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5" selected>5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    <option value="29">29</option>
+                    <option value="30">30</option>
+                    <option value="31">31</option>
+                </select>
+
+                <select name="year" id="year">
+                    <option value="1981">1981</option>
+                    <option value="1982">1982</option>
+                    <option value="1983">1983</option>
+                    <option value="1984">1984</option>
+                    <option value="1985" selected>1985</option>
+                    <option value="1986">1986</option>
+                    <option value="1987">1987</option>
+                    <option value="1988">1988</option>
+                    <option value="1989">1989</option>
+                </select>
+            </div>
+            <div class="gender-wrap input-elem">
+                <input type="radio" name="gender" id="male" required>
+                <label for="male">Male</label>
+                <input type="radio" name="gender" id="female">
+                <label for="female">Female</label>
+            </div>
+            <select name="country" id="country" class="input-elem">
+                <option value="0">USA</option>
+                <option value="1">Ukraine</option>
+                <option value="2">Poland</option>
+            </select>
+            <input type="email" id="email" class="input-elem text-input" placeholder="Enter E-mail......" required>
+            <input type="tel" id="phone" class="input-elem text-input" placeholder="Enter Phone......">
+            <input type="password" id="pass" class="input-elem text-input" required minlength="8" maxlength="18">
+            <input type="password" id="cpass" class="input-elem text-input" required minlength="8" maxlength="18">
+            <div class="terms-wrap">
+                <input type="checkbox" id="terms" required>
+                <label for="terms">I agree to the Terms of Use</label>
+            </div>
+        </div>
+
+        <div class="form-footer">
+            <div class="btn-wrap">
+                <input type="submit" value="Submit" class="form-btn">
+                <input type="reset" value="Cancel" class="form-btn">
+            </div>
+        </div>
+    </form>
+</body>
+</html>

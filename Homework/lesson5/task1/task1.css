@@ -1,0 +1,147 @@
+body {
+    font-family: Arial, Helvetica, sans-serif
+}
+
+form {
+    width: 553px;
+    height: 648px;
+    background-color: #202538;
+    border-radius: 5px;
+    border: 1px solid #de8704;
+    position: relative;
+}
+
+.form-header {
+    height: 37px;
+    background-color: #de8704;
+    border-bottom: 1px solid #dadde2;
+}
+
+.form-header span {
+    color: #ffec56;
+    position: absolute;
+    top: 10px;
+    left: 15px;
+}
+
+.form-footer {
+    height: 54px;
+    width: 100%;
+    background-color: #de8704;
+    border-top: 1px solid #dadde2;
+    position: absolute;
+    bottom: 0;
+}
+
+.labels-wrap {
+    width: 170px;
+    text-align: right;
+    position: absolute;
+    left: 0;
+}
+
+label {
+    color: #ffec56;
+    font-size: 14px;
+}
+
+.labels-wrap label {
+    display: block;
+    margin-top: 32px;
+}
+
+.labels-wrap label:first-child {
+    margin-top: 24px;
+}
+
+.inputs-wrap {
+    width: 339px;
+    position: absolute;
+    right: 15px;
+}
+
+.input-elem {
+    margin-top: 15px;
+}
+
+.text-input {
+    width: 325px;
+    height: 32px;
+    border: 1px solid #c7cacf;
+    border-radius: 4px;
+    padding: 0 0 0 12px;
+}
+
+select {
+    display: inline-block;
+    height: 34px;
+    border: 1px solid #c7cacf;
+    border-radius: 3px;
+    padding-left: 12px;
+}
+
+.date-wrap {
+    position: relative;
+}
+
+#month {
+    padding-right: 22px;
+}
+
+#date {
+    position: absolute;
+    left: 154px;
+    padding-right: 11px;
+}
+
+#year {
+    position: absolute;
+    left: 246px;
+    padding-right: 27px;
+}
+
+.gender-wrap {
+    margin-top: 18px;
+}
+
+.gender-wrap input {
+    margin: 0;
+}
+
+#country {
+    margin-top: 21px;
+    padding-right: 257px; 
+}
+
+#terms {
+    margin: 0 2px 0 0;
+}
+
+.terms-wrap {
+    margin-top: 25px;
+}
+
+.form-btn {
+    height: 32px;
+    padding: 0 13px;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    border: 1px solid;
+}
+
+input[type="submit"].form-btn {
+    background-color: #56bb5f;
+    border-color: #4fad4d;
+}
+
+input[type="reset"].form-btn {
+    background-color: #e44f48;
+    border-color: #bd5403;
+}
+
+.btn-wrap {
+    position: absolute;
+    right: 15px;
+    bottom: 11px;
+}

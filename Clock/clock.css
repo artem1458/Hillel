@@ -1,0 +1,48 @@
+.ciferblat {
+    background-color: red;
+    width: 500px;
+    height: 500px;
+    position: relative;
+    border-radius: 50%;
+}
+.strelka {
+    height: 30px;
+    width: 100%;
+    position: absolute;
+    top: 235px;
+    animation-name: tick;
+    animation-duration: 60s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.space {
+    width: 250px;
+    display: inline-block;
+    height: 100%;
+}
+.strk{
+    background-color: black;
+}
+@keyframes tick {
+    /* 0% {
+        transform: rotate(270deg);
+    }
+    25%{
+        transform: rotate(360deg);
+    }
+    50%{
+        transform: rotate(450deg);
+    }
+    75%{
+        transform: rotate(540deg);
+    }
+    100%{
+        transform: rotate(630deg);
+    } */
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,197 @@
+body {
+    margin: 0;
+}
+
+.anim-wrap {
+    position: relative;
+    width: 1400px;
+    margin: 0 auto;
+}
+
+.cannon-wrap {
+    height: 200px;
+    width: 250px;
+    position: relative;
+    top: 200px;
+    left: 10px;
+    transform: rotate(-5deg);
+}
+
+.cannon-body {
+    width: 250px;
+    height: 150px;
+    background-color: grey;
+    border-radius: 40%;
+    position: absolute;
+    box-shadow: inset 0px 0px 81px -22px rgba(0, 0, 0, 0.75);
+}
+
+.cannon-wheel {
+    width: 75px;
+    height: 75px;
+    background-color: #494949;
+    border: 4px dashed #2f2f2f;
+    border-radius: 50%;
+    position: absolute;
+    top: 105px;
+    box-shadow: inset 0px 0px 25px 3px rgba(0, 0, 0, 0.75);
+}
+
+.cannon-wheel-front {
+    left: 20px;
+}
+
+.cannon-wheel-back {
+    left: 50px;
+}
+
+.cannon-barrel {
+    width: 45px;
+    height: 75px;
+    background: linear-gradient(to left, rgb(100, 100, 100), black);
+    border-radius: 50%;
+    position: absolute;
+    top: 37px;
+    left: 195px;
+    ;
+}
+
+
+
+
+
+.wall-wrap {
+    display: inline-block;
+    position: relative;
+    height: 554px;
+    width: 530px;
+    top: -245px;
+    left: 850px;
+}
+
+.wall {
+    height: 500px;
+    width: 300px;
+    font-size: 0;
+    overflow: hidden;
+}
+
+.wall-transformed {
+    transform: skewY(30deg) scaleX(0.5);
+}
+
+.brick-wrap {
+    width: 350px
+}
+
+.brick {
+    display: inline-block;
+    width: 50px;
+    height: 20px;
+    background-color: #b75434;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.4);
+    transition: .2s;
+}
+
+.brick:hover {
+    transform: scale(1.3);
+    box-shadow: 0 0 2px 2px rgba(0, 255, 191, 0.85);
+}
+
+.brick:active {
+    background-color: #852303;
+}
+
+.wall .brick-wrap:nth-child(even) {
+    position: relative;
+    left: -25px;
+}
+
+.wall-right {
+    position: absolute;
+    top: 43px;
+    left: 225px;
+}
+
+
+
+.cannonball {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 1) 0%, rgba(200, 200, 200, 1) 100%);
+    position: absolute;
+    top: 226px;
+    left: 202px;
+}
+
+@keyframes wall-bounce {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(15px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes cannonball-flight {
+    20% {
+        transform: translate(350px, -40px) scale(1.5);
+    }
+
+    45% {
+        transform: translate(680px, -50px) scale(1);
+    }
+
+    50% {
+        transform: translate(750px, -50px) scale(0.7, 1.3);
+    }
+
+    60% {
+        transform: translate(676px, 211px) scale(1.8, 1.2) skew(28deg);
+    }
+
+    100% {
+        transform: translate(676px, 211px) scale(1.8, 1.2) skew(28deg);
+    }
+}
+
+
+
+.wallAnim {
+    animation: wall-bounce 2s step-end;
+}
+
+.ballAnim {
+    animation: cannonball-flight 2s ease-in;
+}
+
+#btn-start {
+    display: block;
+    padding: 10px 20px;
+    background-color: #b75434;
+    margin: 0 auto;
+    border-radius: 5px;
+    border: 3px solid #773621;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+    transition: 0.2s;
+    position: absolute;
+    top: 520px;
+    left: 1150px;
+}
+
+#btn-start:hover {
+    background-color: #852303;
+}
+
+#btn-start:active {
+    background-color: #ff8f6a;
+}

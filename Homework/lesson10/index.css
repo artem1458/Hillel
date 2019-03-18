@@ -1,0 +1,99 @@
+body {
+    margin: 29px 0 0 0;
+    font-family: "Segoe UI", "Helvetica Neue", Helvetica, sans-serif;
+    color: #595756;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+.page {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+header {
+    position: relative;
+}
+
+.header-logo {
+    display: inline-block;
+    font-size: 0;
+}
+
+.header-nav {
+    display: inline-block;
+    position: absolute;
+    top: 21px;
+    right: 0;
+}
+
+.header-nav li {
+    display: inline;
+    position: relative;
+    list-style-type: none;
+    margin-left: 3px;
+    padding: 10px 0;
+    border-bottom: 1px solid;
+}
+
+.nav-selected::after {
+    content: "";
+    position: absolute;
+    bottom: -12px;
+    right: 44%;
+    border: 6px solid transparent;
+    border-top: 6px solid inherit;
+}
+
+/* TODO РАЗОБРАТЬСЯ С ЦВЕТОМ ТРЕУГОЛЬНИКА */
+
+
+.header-nav li:nth-child(1) {
+    border-color: #2d89ef;
+}
+
+.header-nav li:nth-child(1):hover {
+    color: #2d89ef;
+}
+
+.header-nav li:nth-child(2) {
+    border-color: #603cba;
+}
+
+.header-nav li:nth-child(2):hover {
+    color: #603cba;
+}
+
+.header-nav li:nth-child(3) {
+    border-color: #01a31c;
+}
+
+.header-nav li:nth-child(3):hover {
+    color: #01a31c;
+}
+
+.header-nav li:nth-child(4) {
+    border-color: #d44a26;
+}
+
+.header-nav li:nth-child(4):hover {
+    color: #d44a26;
+}
+
+.header-nav li:nth-child(5) {
+    border-color: #f0a427;
+}
+
+.header-nav li:nth-child(5):hover {
+    color: #f0a427;
+}
+
+.header-nav a {
+    text-decoration: none;
+    color: inherit;
+    padding: 10px 22px;
+}
+

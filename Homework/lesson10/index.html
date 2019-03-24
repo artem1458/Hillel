@@ -8,6 +8,7 @@
     <title>Lesson10</title>
     <link rel="stylesheet" href="fonts/stylesheet.css">
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="media.css">
 </head>
 
 <body>
@@ -73,7 +74,7 @@
                     </form>
                 </div>
                 <div class="product-image-wrap">
-                    <img src="img/product.jpg" alt="Product" class="product-rep-img">
+                    <img src="img/product.jpg" alt="Product">
                 </div>
             </article>
         </section>
@@ -148,10 +149,37 @@
             <form action="#" class="feedback-form">
                 <div class="feedback-form-header">
                     <span>Форма обратной связи
-                    <br>
-                    разработка, модификация или просто вопросы по модулю...</span>
+                        <br>
+                        разработка, модификация или просто вопросы по модулю...</span>
+                </div>
+                <div class="form-inputs-wrap">
+                    <div class="input-group-1">
+                        <select name="type" class="input">
+                            <option selected disabled>Выберите тип обращения</option>
+                            <option value="1">
+                                Type1
+                            </option>
+                            <option value="2">
+                                Type2
+                            </option>
+                            <option value="3">
+                                Type3
+                            </option>
+                        </select>
+                        <input type="text" placeholder="Имя *" class="input">
+                        <input type="email" placeholder="E-mail *" class="input">
+                        <input type="tel" placeholder="Телефон" class="input">
+                    </div>
+                    <div class="input-group-2">
+                        <input type="text" name="message" class="input" placeholder="Сообщение *">
+                        <input type="submit" value="Отправить" class="submit-btn">
+                    </div>
                 </div>
             </form>
+
+            <footer>
+                <span>© 2012-2013 Biovoid. Все права защищены.</span>
+            </footer>
         </main>
     </div>
 

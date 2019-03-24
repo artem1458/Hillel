@@ -29,10 +29,6 @@ header {
     user-select: none;
 }
 
-
-
-
-
 .header-nav li {
     display: inline-block;
     position: relative;
@@ -145,7 +141,7 @@ header {
     position: relative;
 }
 
-.product-cards-wrap span{
+.product-cards-wrap span {
     color: #fff;
     font-size: 12px;
     margin-left: 72px;
@@ -177,14 +173,16 @@ header {
     bottom: 15px;
 }
 
-.product-cards_doc, .product-cards_example {
+.product-cards_doc,
+.product-cards_example {
     width: 300px;
     height: 70px;
     background-color: #00a300;
     margin-bottom: 28px;
 }
 
-.product-cards_doc h1, .product-cards_example h1 {
+.product-cards_doc h1,
+.product-cards_example h1 {
     padding-top: 12px;
 }
 
@@ -199,7 +197,8 @@ header {
     margin: 0;
 }
 
-.product-cards_doc h1::before,  .product-cards_example h1::before {
+.product-cards_doc h1::before,
+.product-cards_example h1::before {
     content: '';
     background-image: url(img/product-doc.png);
     display: block;
@@ -239,6 +238,7 @@ header {
     margin-left: 64px;
     padding-top: 12px;
 }
+
 .product-cards_video span {
     margin-left: 65px;
 }
@@ -282,7 +282,7 @@ header {
 }
 
 
-.search-wrap form{
+.search-wrap form {
     position: relative;
 }
 
@@ -293,7 +293,7 @@ header {
     border: 1px solid #ccc;
 }
 
-.search-wrap form input[type="submit"]{
+.search-wrap form input[type="submit"] {
     position: absolute;
     right: 15px;
     top: 10px;
@@ -308,12 +308,10 @@ header {
     min-height: 304px;
     border: 3px solid #f1f1f1;
     margin-top: 27px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-
-.product-rep-img {
-    transform: translate(16px, 29px);
-}
-
 
 main {
     color: #000;
@@ -341,17 +339,6 @@ main p {
     margin: 0;
 }
 
-/* .description-blocks h1::before {
-    content: '';
-    display: block;
-    height: 132px;
-    position: absolute;
-    left: 0;
-    top: -1px;
-    border-left: 9.5px solid;
-    border-right: 9.5px solid;
-} */
-
 .description-blocks-elem {
     min-height: 130px;
     border: 1px solid #ccc;
@@ -362,27 +349,31 @@ main p {
 .description-blocks-elem-corner {
     position: absolute;
     top: -1px;
-    left: 0;
+    left: -1px;
     height: calc(100% + 2px);
-    border-left: 9.5px solid;
-    border-right: 9.5px solid;
+    border-left: 10px solid;
+    border-right: 10px solid;
 }
 
 .description-blocks-elem p {
-    padding: 5px 30px 0 33px;
+    padding: 5px 30px 10px 33px;
     color: #000;
 }
 
-.description-blocks > div:nth-child(1)  {
+.description-blocks>div:nth-child(1) {
     color: #00a300;
 }
 
-.description-blocks > div:nth-child(2) {
+.description-blocks>div:nth-child(2) {
     color: #ffc40d;
 }
 
-.description-blocks > div:nth-child(3) {
+.description-blocks>div:nth-child(3) {
     color: #2d89ef;
+}
+
+.feedback-form {
+    background-color: #f1f1f1;
 }
 
 .feedback-form-header {
@@ -396,7 +387,7 @@ main p {
     font-size: 18px;
     color: #fff;
     font-weight: 100;
-    transform: translate(52px, 13px);
+    padding: 13px 0 10px 52px;
     line-height: 1;
     position: relative;
 }
@@ -419,6 +410,65 @@ main p {
     height: 32px;
     background-image: url(img/paper-plane.png);
     position: absolute;
-    left: -36px;
-    top: 4px;
+    left: 16px;
+    top: 17px;
+}
+
+.form-inputs-wrap {
+    min-height: 212px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.input {
+    border: 2px solid #bababa;
+    color: #000;
+    font-family: "Segoe UI", "Helvetica Neue", Helvetica, sans-serif;
+    display: block;
+    padding: 5px 0 4px 9px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 18px;
+}
+
+.input::placeholder {
+    color: #000;
+}
+
+.input-group-1 {
+    width: 310px;
+    margin-left: 16px;
+}
+
+.input-group-2 {
+    flex-grow: 1;
+    margin-left: 19px;
+}
+
+.input-group-2 .input {
+    padding-bottom: 100px;
+    width: calc(100% - 17px);
+}
+
+.submit-btn {
+    background-color: #c3325f;
+    color: #fff;
+    width: 114px;
+    height: 31px;
+    border: none;
+    margin-top: 20px;
+}
+
+footer {
+    background-color: #f1f1f1;
+    margin: 30px 0;
+    height: 48px;
+}
+
+footer span {
+    font-size: 12px;
+    color: #3b3b3b;
+    padding-left: 16px;
+    line-height: 48px;
 }

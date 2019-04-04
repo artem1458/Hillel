@@ -1,0 +1,41 @@
+.c-product-card {
+    width: 300px;
+    display: flex;
+    flex-grow: 1;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Open Sans', sans-serif;
+    padding-bottom: 31px;
+}
+
+.c-product-card__heading {
+    color: #3674ba;
+    font-size: 22px;
+    text-transform: uppercase;
+    padding-top: 23px;
+}
+
+.c-product-card p {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 14px;
+    color: #4e4e4e;
+    width: 270px;
+    padding-top: 10px;
+}
+
+.c-product-card__btn {
+    display: block;
+    background-color: #3674ba;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 14px;
+    width: 127px;
+    padding: 6px 0;
+    margin-top: 17px;
+}
+
+.c-product-card__btn:hover {
+    background-color: #43627e;
+}

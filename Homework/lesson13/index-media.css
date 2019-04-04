@@ -1,0 +1,42 @@
+@media screen and (max-width: 940px) {
+    header {
+        justify-content: space-around;
+    }
+
+    .header__nav {
+        flex-direction: column;
+    }
+
+    .header__nav li {
+        flex-wrap: wrap;
+        padding: 5px;
+        margin: 0;
+    }
+
+    .about__skills,
+    .about__form {
+        padding: 10px 20px;
+    }
+
+    .about {
+        justify-content: center;
+    }
+
+    .slides-wrap .slides__item {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .slides__item img {
+        display: none;
+    }
+
+
+    .slides__item__info {
+        align-items: center;
+        padding: 20px;
+        text-align: center;
+    }
+}

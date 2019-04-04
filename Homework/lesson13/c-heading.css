@@ -1,0 +1,36 @@
+.c-heading {
+    color: #5b6169;
+    font-size: 48px;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 45px 0;
+}
+
+.c-heading__line {
+    border-top: 1px solid;
+    flex-grow: 2;
+}
+
+.c-heading__line:first-child {
+    margin-left: 73px;
+}
+
+.c-heading__line:last-child {
+    margin-right: 73px;
+}
+
+.c-heading__text {
+    margin: 0 17px;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 500px) {
+    .c-heading__line {
+        display: none;
+    }
+}

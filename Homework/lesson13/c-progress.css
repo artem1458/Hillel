@@ -1,0 +1,22 @@
+.c-progress-bar {
+    height: 30px;
+    margin-top: 10px;
+    background-color: #828181;
+    position: relative;
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.c-progress-bar-fill {
+    background-color: #3674ba;
+    position: absolute;
+    height: 30px;
+    width: calc(100% * 0.95);
+}
+
+.c-progress-bar span {
+    padding: 7px;
+    position: absolute;
+}

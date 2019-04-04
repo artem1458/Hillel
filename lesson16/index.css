@@ -1,0 +1,33 @@
+.menu {
+  list-style-type: none;
+  padding: 10px;
+}
+.menu__item {
+  color: red;
+}
+.menu__item:hover {
+  color: yellow;
+}
+.menu__item--active {
+  color: cyan;
+}
+button:after {
+  content: '';
+  display: inline-block;
+  border: 15px solid transparent;
+  border-top: 15px solid green;
+  width: 1px;
+  height: 1px;
+}
+.btn {
+  display: block;
+  color: green;
+}
+#project .btn {
+  display: inline;
+  color: red;
+}
+.my-button {
+  display: inline;
+  color: red;
+}

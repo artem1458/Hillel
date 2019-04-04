@@ -1,0 +1,54 @@
+
+//naming
+.menu {
+    list-style-type: none;
+    padding: 10px;
+
+    &__item {
+        color: red;
+
+        &:hover {
+            color: yellow;
+        }
+
+        &--active {
+            color: cyan;
+        }
+    }
+}
+
+
+//mixins
+
+.triangle(@color, @size) {
+    border: @size solid transparent;
+    border-top: @size solid @color;
+    width: 1px;
+    height: 1px;
+}
+
+
+button {
+    &:after {
+        content: '';
+        display: inline-block;
+        .triangle(green, 15px);
+    }
+}
+
+
+.btn {
+    display: block;
+    color: green;
+}
+
+#project {
+    .btn {
+        display: inline;
+        color: red;
+    }
+}
+
+.my-button {
+    #project>.btn;
+}

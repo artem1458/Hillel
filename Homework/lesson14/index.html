@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lesson14</title>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="c-product-card.css">
+    <link rel="stylesheet" href="c-slider.css">
+    <link rel="stylesheet" href="media.css">
+</head>
+
+<body>
+    <header>
+        <div class="header__logo">
+            <a href="#"><img src="img/header__logo.jpg" alt="logo"></a>
+        </div>
+        <div class="header__search-bar">
+            <form action="#">
+                <input type="search" name="searchbox" id="searchbox" placeholder="Search form">
+                <input type="submit" value="Search" id="search-submit">
+            </form>
+        </div>
+        <div class="header__shopping-cart">
+            <a href="#"><span><i class="fas fa-cart-arrow-down"></i> <strong>3 items</strong> / EUR 199.90</span></a>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Catalogue</a></li>
+            <li><a href="#">Company</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <aside>
+            <h2>Select Category</h2>
+            <ul class="aside__menu">
+                <li><a href="#">First Category</a></li>
+                <li><a href="#">Second Category</a></li>
+                <li><a href="#">Third Category</a></li>
+                <li><a href="#">Fourth Category</a></li>
+                <li><a href="#">Fifth Category</a></li>
+                <li><a href="#">Sixth Category</a></li>
+            </ul>
+        </aside>
+
+        <div class="slider">
+            <div class="c-slider">
+                <div class="slides-wrap">
+                    <div class="slides__item">
+                        <img src="img/slider-slide1.jpg" alt="">
+                    </div>
+                    <div class="slides__item">
+                        <img src="img/slider-slide2.jpg" alt="">
+                    </div>
+                    <div class="slides__item">
+                        <img src="img/slider-slide3.jpg" alt="">
+                    </div>
+                    <div class="slides__item">
+                        <img src="img/slider-slide4.jpg" alt="">
+                    </div>
+
+                </div>
+                <div class="slider__btn-wrap"></div>
+            </div>
+        </div>
+
+        <section class="catalog">
+            <div class="catalog__heading">
+                <span><a href="#"><i class="fas fa-home"></i></a> / <a href="#">Catalogue</a> / <a href="#">First
+                        Category</a> / Sub-Category</span>
+                <h1>Products</h1>
+            </div>
+            <div class="c-product-card">
+                <img src="img/gallery-image1.jpg" alt="gallery-image">
+                <span class="c-product-card__cost">EUR 20.59</span>
+                <span class="c-product-card__heading">Product name lorem ipsum dolor</span>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Morbi faucibus augue vitae est volutpat eleifend.
+                </p>
+                <a href="#" class="c-product-card__btn">more info</a>
+            </div>
+            <div class="c-product-card">
+                <img src="img/gallery-image2.jpg" alt="gallery-image">
+                <span class="c-product-card__cost">EUR 20.59</span>
+                <span class="c-product-card__heading">Product name lorem ipsum dolor</span>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Morbi faucibus augue vitae est volutpat eleifend.
+                </p>
+                <a href="#" class="c-product-card__btn">more info</a>
+            </div>
+            <div class="c-product-card">
+                <img src="img/gallery-image3.jpg" alt="gallery-image">
+                <span class="c-product-card__cost">EUR 20.59</span>
+                <span class="c-product-card__heading">Product name lorem ipsum dolor</span>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Morbi faucibus augue vitae est volutpat eleifend.
+                </p>
+                <a href="#" class="c-product-card__btn">more info</a>
+            </div>
+            <div class="c-product-card">
+                <img src="img/gallery-image4.jpg" alt="gallery-image">
+                <span class="c-product-card__cost">EUR 20.59</span>
+                <span class="c-product-card__heading">Product name lorem ipsum dolor</span>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Morbi faucibus augue vitae est volutpat eleifend.
+                </p>
+                <a href="#" class="c-product-card__btn">more info</a>
+            </div>
+            <div class="c-product-card">
+                <img src="img/gallery-image2.jpg" alt="gallery-image">
+                <span class="c-product-card__cost">EUR 20.59</span>
+                <span class="c-product-card__heading">Product name lorem ipsum dolor</span>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Morbi faucibus augue vitae est volutpat eleifend.
+                </p>
+                <a href="#" class="c-product-card__btn">more info</a>
+            </div>
+            <div class="c-product-card">
+                <img src="img/gallery-image3.jpg" alt="gallery-image">
+                <span class="c-product-card__cost">EUR 20.59</span>
+                <span class="c-product-card__heading">Product name lorem ipsum dolor</span>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Morbi faucibus augue vitae est volutpat eleifend.
+                </p>
+                <a href="#" class="c-product-card__btn">more info</a>
+            </div>
+            <div class="c-product-card">
+                <img src="img/gallery-image1.jpg" alt="gallery-image">
+                <span class="c-product-card__cost">EUR 20.59</span>
+                <span class="c-product-card__heading">Product name lorem ipsum dolor</span>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Morbi faucibus augue vitae est volutpat eleifend.
+                </p>
+                <a href="#" class="c-product-card__btn">more info</a>
+            </div>
+            <div class="c-product-card">
+                <img src="img/gallery-image4.jpg" alt="gallery-image">
+                <span class="c-product-card__cost">EUR 20.59</span>
+                <span class="c-product-card__heading">Product name lorem ipsum dolor</span>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Morbi faucibus augue vitae est volutpat eleifend.
+                </p>
+                <a href="#" class="c-product-card__btn">more info</a>
+            </div>
+            <div class="c-product-card">
+                <img src="img/gallery-image2.jpg" alt="gallery-image">
+                <span class="c-product-card__cost">EUR 20.59</span>
+                <span class="c-product-card__heading">Product name lorem ipsum dolor</span>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Morbi faucibus augue vitae est volutpat eleifend.
+                </p>
+                <a href="#" class="c-product-card__btn">more info</a>
+            </div>
+            <div class="c-product-card">
+                <img src="img/gallery-image4.jpg" alt="gallery-image">
+                <span class="c-product-card__cost">EUR 20.59</span>
+                <span class="c-product-card__heading">Product name lorem ipsum dolor</span>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Morbi faucibus augue vitae est volutpat eleifend.
+                </p>
+                <a href="#" class="c-product-card__btn">more info</a>
+            </div>
+            <div class="c-product-card">
+                <img src="img/gallery-image1.jpg" alt="gallery-image">
+                <span class="c-product-card__cost">EUR 20.59</span>
+                <span class="c-product-card__heading">Product name lorem ipsum dolor</span>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Morbi faucibus augue vitae est volutpat eleifend.
+                </p>
+                <a href="#" class="c-product-card__btn">more info</a>
+            </div>
+            <div class="c-product-card">
+                <img src="img/gallery-image4.jpg" alt="gallery-image">
+                <span class="c-product-card__cost">EUR 20.59</span>
+                <span class="c-product-card__heading">Product name lorem ipsum dolor</span>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Morbi faucibus augue vitae est volutpat eleifend.
+                </p>
+                <a href="#" class="c-product-card__btn">more info</a>
+            </div>
+
+        </section>
+    </main>
+    <footer>
+        <div class="footer-wrap">
+            <span>Copyright 2018. Visio Designer - graphics zoo</span>
+            <a href="#">Design and coding by Responsee Team</a>
+        </div>
+    </footer>
+
+    <script src="c-slider.js"></script>
+</body>
+
+</html>

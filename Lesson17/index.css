@@ -1,0 +1,35 @@
+body {
+  background-color: #191919;
+}
+
+h1 {
+  color: red;
+  font-size: 5px;
+}
+
+h2 {
+  color: red;
+  font-size: 30px;
+}
+
+.btn, .btn-test {
+  background-color: red;
+}
+
+.btn-test {
+  width: 150px;
+}
+
+h1 {
+  color: red;
+  font-size: 30px;
+}
+
+h1:after {
+  content: '';
+  width: 1px;
+  height: 1px;
+  border: 30px solid transparent;
+  border-top: 30px solid yellow;
+}
+/*# sourceMappingURL=index.css.map */

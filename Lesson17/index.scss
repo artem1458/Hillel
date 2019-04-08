@@ -1,0 +1,56 @@
+@import 'index1.scss';
+
+body {
+    background-color: rgb(25, 25, 25);
+}
+
+$test-variable: 5px;
+
+h1 {
+    color: red;
+    font-size: $test-variable;
+}
+
+
+$test-variable: 30px;
+
+h2 {
+    color: red;
+    font-size: $test-variable;
+}
+
+
+
+
+.btn {
+    background-color: red;
+}
+
+
+.btn-test {
+    @extend .btn;
+
+    width: 150px;
+}
+
+//Extend не может использоваться в медиа запросах + не поддерживает аргументы
+
+
+
+@mixin triangle ($border-color: yellow) {
+    content: '';
+    width: 1px;
+    height: 1px;
+    border: 30px solid transparent;
+    border-top: 30px solid $border-color;
+}
+
+h1 {
+    color: red;
+    font-size: $test-variable;
+    &:after {
+        @include triangle();
+    }
+}
+
+//mixin может принимать аргументы, и параметры аргументов по умолчанию

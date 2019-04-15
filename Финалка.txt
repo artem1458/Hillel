@@ -19,3 +19,5 @@ Latest news
 Использовать article
 
 textarea no resize
+
+попробовать перевести некоторые элементы в svg

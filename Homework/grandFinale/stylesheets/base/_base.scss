@@ -18,13 +18,12 @@ a {
 }
 
 .content-wrap {
-    //При меньшем разрешении добавить паддинги
     max-width: 1110px;
     margin: 0 auto;
 }
 
 
-//Удалить или оставить?
+//Удалить
 .text-color-accent {
     font-style: normal;
     color: $color-green;

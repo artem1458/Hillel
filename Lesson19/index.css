@@ -1,0 +1,180 @@
+/* .header {
+    background-color: cyan;
+    height: 100px;
+}
+
+.hero {
+    width: 50%;
+    float: left;
+    height: 400px;
+    background-color: pink;
+}
+
+.main {
+    float: right;
+    width: 50%;
+    height: 800px;
+    background-color: orange;
+}
+.sidebar {
+    background-color: green;
+    float: left;
+    width: 50%;
+    height: 500px;
+}
+
+.extra-content {
+    background-color: brown;
+    height: 100px;
+    width: 50%;
+    float: right;
+
+}
+.related {
+    width: 70%;
+    float: left;
+    background-color: palevioletred;
+    height: 200px;
+}
+
+.related-posts {
+    width: 30%;
+    float: right;
+    background-color: peru;
+    height: 200px;
+}
+
+
+.footer {
+    background-color: orange;
+    height: 100px;
+} */
+
+/* body {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+div {
+    margin: 2px;
+}
+
+.flex-wrap {
+    display: flex;
+    width: 100%;
+}
+
+.header {
+    background-color: cyan;
+    height: 100px;
+    width: 100%;
+}
+
+.flex-wrap--col1 {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-wrap--col2 {
+    flex-grow: 3;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero {
+    height: 400px;
+    background-color: pink;
+    flex-grow: 1;
+}
+
+.main {
+    height: 800px;
+    background-color: orange;
+    flex-grow: 2;
+}
+.sidebar {
+    background-color: green;
+    height: 500px;
+}
+
+.extra-content {
+    background-color: brown;
+    height: 100px;;
+}
+.related {
+    background-color: palevioletred;
+    height: 200px;
+    flex-grow: 1;
+}
+
+.related-posts {
+    background-color: peru;
+    height: 200px;
+    flex-grow: 3;
+}
+
+
+.footer {
+    background-color: orange;
+    height: 100px;
+    width: 100%;
+} */
+
+body {
+    display: grid;
+    grid-template-areas: 
+    'header header header'
+    'hero main main'
+    'sidebar main main'
+    'sidebar extra-content extra-content'
+    'related related related-posts'
+    'footer footer footer';
+    grid-auto-rows: 100px;
+    height: 100vh;
+    grid-gap: 2px;
+}
+
+
+.header {
+    background-color: cyan;
+    grid-area: header;
+}
+
+
+.hero {
+    background-color: pink;
+    grid-area: hero;
+}
+
+.main {
+    background-color: orange;
+    grid-area: main;
+
+}
+.sidebar {
+    background-color: green;
+    grid-area: sidebar;
+
+}
+
+.extra-content {
+    background-color: brown;
+    grid-area: extra-content;
+}
+.related {
+    background-color: palevioletred;
+    grid-area: related;
+
+}
+
+.related-posts {
+    background-color: peru;
+    grid-area: related-posts;
+}
+
+
+.footer {
+    background-color: orange;
+    grid-area: footer;
+}

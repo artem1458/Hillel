@@ -1,0 +1,101 @@
+.header {
+  background-color: cyan;
+}
+
+.hero {
+  background-color: pink;
+}
+
+.main {
+  background-color: orange;
+}
+
+.sidebar {
+  background-color: green;
+}
+
+.extra-content {
+  background-color: brown;
+}
+
+.related {
+  background-color: palevioletred;
+}
+
+.related-posts {
+  background-color: peru;
+}
+
+.footer {
+  background-color: orange;
+}
+
+body {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: 'header header header'
+ 'hero main main'
+ 'sidebar main main'
+ 'sidebar extra-content extra-content'
+ 'related related related-posts'
+ 'footer footer footer';
+  grid-auto-rows: 100px;
+  height: 100vh;
+  grid-gap: 2px;
+}
+
+.header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: header;
+}
+
+.hero {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: hero;
+}
+
+.main {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: main;
+}
+
+.sidebar {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: sidebar;
+}
+
+.extra-content {
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: extra-content;
+}
+
+.related {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: related;
+}
+
+.related-posts {
+  -ms-grid-row: 5;
+  -ms-grid-column: 3;
+  grid-area: related-posts;
+}
+
+.footer {
+  -ms-grid-row: 6;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: footer;
+}
+/*# sourceMappingURL=indexS.css.map */

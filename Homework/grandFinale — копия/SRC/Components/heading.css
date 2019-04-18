@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Roboto:300,300i,400,400i,500,500i,700,700i,900,900i");
+.heading__text {
+  font-family: "Roboto", sans-serif;
+  color: #515151;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 48px;
+  letter-spacing: -0.02em;
+  padding-bottom: 16px;
+}
+
+@media screen and (max-width: 768px) {
+  .heading__text {
+    font-size: 36px;
+  }
+}
+
+.heading__underline {
+  margin: 0 auto;
+  width: 164px;
+  height: 7px;
+  background-color: #1abc9c;
+  border-top: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+  background-clip: content-box;
+}
+
+.heading__underline--low {
+  height: 2px;
+  border: none;
+}
+/*# sourceMappingURL=heading.css.map */

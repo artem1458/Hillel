@@ -1,0 +1,17 @@
+.newsletter {
+    background: url(../assets/components/newsletter/bg.jpg) no-repeat center;
+    background-color: #4ec6ab;
+    color: $newsletter-text-color;
+    text-align: center;
+
+    & .heading__underline {
+        background-color: $newsletter-heading__underline-color;
+    }
+
+    &__description {
+        @include font-props (16px, -20);
+        font-family: $font-open-sans;
+        font-weight: 300;
+    }
+
+}

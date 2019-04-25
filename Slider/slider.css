@@ -1,0 +1,110 @@
+body {
+  min-height: 600px;
+  width: 900px;
+}
+
+.test-div {
+  min-height: 300px;
+  font-size: 40px;
+}
+
+.slider {
+  position: relative;
+  overflow: hidden;
+}
+
+.slider__slides {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 100%;
+  -webkit-transition: .5s;
+  transition: .5s;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.slider__slide {
+  line-height: 0;
+}
+
+.slider__control-dots {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 20px;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.slider__control-dot {
+  display: block;
+  background-color: rgba(0, 128, 0, 0.5);
+  width: 82px;
+  height: 82px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slider__control-dot:hover {
+  background-color: #37aa90;
+}
+
+.slider__control-dot:active {
+  background-color: #2a8470;
+}
+
+.slider__control-dot--active {
+  background-color: black;
+}
+
+.slider__control-dot-preview {
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 5px solid black;
+  background-size: 105% 105%;
+  background-position: center center;
+}
+
+.slider__control-dot-preview:hover {
+  background-color: #37aa90;
+}
+
+.slider__control-dot-preview:active {
+  background-color: #2a8470;
+}
+
+.slider__control-dot-preview.slider__control-dot--active {
+  border-color: #4ec6ab;
+}
+
+.slider__btn-prev {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-color: #00f7ff;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.slider__btn-next {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-color: #00f7ff;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+/*# sourceMappingURL=slider.css.map */

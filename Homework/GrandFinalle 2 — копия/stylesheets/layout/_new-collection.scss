@@ -1,0 +1,10 @@
+.new-collection {
+    padding-top: 90px;
+    padding-bottom: 70px;
+
+    background-color: $new-collection-bg-color; //Исправить
+
+    & .heading {
+        margin-bottom: 79px;
+    }
+}

@@ -1,0 +1,21 @@
+.sale-season {
+    background: url(../assets/components/sale-season/bg.jpg) no-repeat center;
+    color: $sale-season-text-color;
+    text-align: center;
+
+    &__heading {
+        margin: 30px 0 0 0;
+
+        @include font-props (60px, -20);
+        font-family: $font-roboto;
+        font-weight: 900;
+    }
+
+    &__description {
+        margin: 0;
+
+        @include font-props (36px, -20);
+        font-family: $font-open-sans;
+        font-weight: 300;
+    }
+}

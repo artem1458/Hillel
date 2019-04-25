@@ -1,0 +1,14 @@
+.footer {
+    background-color: #000;
+    @include font-props(16px, -20);
+    font-family: $font-open-sans;
+    color: #fff;
+    text-align: center;
+
+    padding: 30px 0;
+
+    &__accent {
+        color: $text-color-accent;
+        font-style: normal;
+    }
+}

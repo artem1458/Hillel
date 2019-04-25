@@ -1,0 +1,36 @@
+.cart {
+    @include font-props(18px, -20);
+    text-transform: uppercase;
+    position: relative;
+
+    & .fa-search {
+        margin-right: 8px;
+    }
+
+    &__shopping-bag {
+        width: 22px;
+        height: 27px;
+        position: relative;
+        top: -6px;
+        right: -6px;
+    }
+    &__item {
+        display: flex;
+        align-items: flex-start;    
+
+        &:hover span{
+            text-decoration: underline;
+        }
+        
+        &::after {
+            content: attr(data-cart-count);
+
+            @include text-color-accent;
+            @include font-props(14px, -20);
+
+            position: absolute;
+            top: 2px;
+            right: 2px;
+        }
+    }
+}

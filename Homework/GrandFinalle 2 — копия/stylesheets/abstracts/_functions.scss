@@ -1,0 +1,3 @@
+@function calc-letter-spacing($font-size, $photoshop-interval: -20) {
+    @return $photoshop-interval * $font-size / 1000;
+}

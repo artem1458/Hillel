@@ -1,0 +1,34 @@
+body {
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.page {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.container-max-width {
+    max-width: 1110px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @include respond-to('large') {
+        padding: 0 10px;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        align-items: center;
+        justify-items: center;
+    }
+
+    @include respond-to('medium') {
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+    }
+}

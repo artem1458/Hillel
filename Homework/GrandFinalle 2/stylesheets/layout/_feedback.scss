@@ -1,0 +1,11 @@
+.feedback {
+    margin: 0 auto;
+    padding: 91px 0;
+
+    & .container-max-width {
+        display: flex;
+        @include respond-to('large') {
+            justify-content: center;
+        }
+    }
+}

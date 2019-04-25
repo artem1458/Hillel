@@ -1,0 +1,93 @@
+.feedback-form {
+    width: 100%;
+    display: grid;
+    grid-template-areas:
+        'name email'
+        'subject website'
+        'message message'
+        'message message';
+    grid-auto-rows: 50px;
+    gap: 30px;
+
+    font-family: $font-roboto;
+
+    &__name {
+        grid-area: name;
+    }
+
+    &__email {
+        grid-area: email;
+    }
+
+    &__subject {
+        grid-area: subject;
+    }
+
+    &__website {
+        grid-area: website;
+    }
+
+    &__message {
+        grid-area: message;
+        resize: none;
+    }
+
+    @include respond-to('medium') {
+        grid-template-areas:
+            'name'
+            'email'
+            'subject'
+            'website'
+            'message'
+            'message';
+    }
+
+}
+
+.feedback-form__text-input {
+    box-sizing: border-box;
+    background: transparent;
+    border: 1px solid;
+    padding-left: 18px;
+    transition: .2s;
+
+    @include font-props (18px, -20);
+    font-weight: 300;
+    line-height: 45px;
+    color: $feedback-form-text-color;
+
+    &:focus,
+    &:active {
+        outline: none;
+        color: $feedback-form-text-color-focus;
+
+        &::placeholder {
+            color: $feedback-form-text-color-focus;
+        }
+    }
+
+    &::placeholder {
+        color: $feedback-form-text-color;
+    }
+}
+
+.feedback-form__submit-btn {
+    color: $feedback-form-text-color;
+    background-color: $feedback-form-submit-btn-bg-color;
+    border: none;
+    width: 150px;
+    transition: .2s;
+
+    &:hover {
+        background-color: darken($feedback-form-submit-btn-bg-color, 10%);
+    }
+
+    &:active {
+        background-color: lighten($feedback-form-submit-btn-bg-color, 10%);
+    }
+
+    &:focus,
+    &:active {
+        outline: none;
+    }
+}

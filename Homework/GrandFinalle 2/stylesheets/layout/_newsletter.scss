@@ -1,0 +1,19 @@
+.newsletter {
+    margin: 0 auto;
+    padding-top: 91px;
+    padding-bottom: 135px;
+
+    & .container-max-width {
+        display: flex;
+        justify-content: center;
+    }
+
+    & .heading {
+        margin-bottom: 27px;
+    }
+
+    &__description {
+        width: 100%;
+        margin: 0 0 43px 0;
+    }
+}

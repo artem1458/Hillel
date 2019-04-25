@@ -1,0 +1,37 @@
+@import "../../../stylesheets/abstracts/variables";
+@import "../../../stylesheets/abstracts/functions";
+@import "../../../stylesheets/abstracts/mixins";
+@import "../../../stylesheets/base/typography";
+
+.heading {
+    &__text {
+        @include font-props(48px, -20);
+        font-family: $font-roboto;
+        color: $heading-text-color;    
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 900;
+        margin: 0;
+        padding-bottom: 16px;
+        user-select: none;
+
+        @media screen and (max-width: 768px) {
+            @include font-props(36px, -20);
+        }
+    }
+
+    &__underline {
+        margin: 0 auto;
+        width: 164px;
+        height: 7px;
+        background-color: $heading-underline-color;
+        border-top: 2px solid transparent;
+        border-bottom: 2px solid transparent;
+        background-clip: content-box;
+    }
+
+    &__underline--low {
+        height: 2px;
+        border: none;
+    }
+}

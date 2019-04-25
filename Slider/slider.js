@@ -17,8 +17,10 @@ function initializeSliders() {
     }
 
     function slideTo(sliderNode, slidesNode, sliderNodeOffsetWidth, n) {
+        const activeDot = sliderNode.querySelectorAll('.slider__control-dot');
         slidesNode.style.transform = `translateX(-${sliderNodeOffsetWidth * n}px)`;
         sliderNode.setAttribute('data-current-slide', n);
+        controlActive(sliderNode, activeDot[n]);
     }
 
     function createControl(sliderNode) {
@@ -27,7 +29,7 @@ function initializeSliders() {
             const sliderControlDots = document.createElement('div');
             sliderControlDots.classList.add('slider__control-dots');
 
-            if(sliderNode.classList.contains('slider--preview')) {
+            if (sliderNode.classList.contains('slider--preview')) {
                 const slidesPreviewCollection = sliderNode.querySelectorAll('.slider__control-dot-preview-img');
                 let paths = [];
                 for (let node of slidesPreviewCollection) {
@@ -36,6 +38,7 @@ function initializeSliders() {
                 for (let i = 0; i < sliderSlideCollection.length; i++) {
                     const btnNode = document.createElement('a');
                     btnNode.classList.add('slider__control-dot-preview');
+                    btnNode.classList.add('slider__control-dot');
                     btnNode.setAttribute('role', 'button');
                     btnNode.setAttribute('data-slide-to', i);
                     btnNode.style.backgroundImage = `url(${paths[i]})`;
@@ -125,6 +128,7 @@ function initializeSliders() {
     function startSlide(sliderNode) {
         if (!sliderNode.getAttribute('data-current-slide')) {
             sliderNode.setAttribute('data-current-slide', '0');
+            slideTo(sliderNode, sliderNode.querySelector('.slider__slides'), sliderNode.offsetWidth, 0);
         } else {
             let n = parseInt(sliderNode.getAttribute('data-current-slide'), 10) - 1;
             slideTo(sliderNode, sliderNode.querySelector('.slider__slides'), sliderNode.offsetWidth, n);
@@ -132,24 +136,19 @@ function initializeSliders() {
     }
 
     function controlActive(sliderNode, activeDot) {
-        const dots = sliderNode.querySelectorAll('.slider__control-dot');
-        if (activeDot.classList.contains('slider__control-dot')) {
-            for (let node of dots) {
-                node.classList.remove('slider__control-dot--active');
-            }
-            activeDot.classList.add('slider__control-dot--active');
+        if(!sliderNode.classList.contains('slider--control-dots')) {
             return;
         }
-        const dotsPrev = sliderNode.querySelectorAll('.slider__control-dot-preview');
-        for (let node of dotsPrev) {
-            node.classList.remove('slider__control-dot-preview--active');
+        const dots = sliderNode.querySelectorAll('.slider__control-dot');
+        for (let node of dots) {
+            node.classList.remove('slider__control-dot--active');
         }
-        activeDot.classList.add('slider__control-dot-preview--active');
+        activeDot.classList.add('slider__control-dot--active');
     }
-}
 
-function createSlider(sliderNode) {
-    startSlide(sliderNode);
-    createControl(sliderNode);
-    addInterval(sliderNode);
+    function createSlider(sliderNode) {
+        createControl(sliderNode);
+        addInterval(sliderNode);
+        startSlide(sliderNode);
+    }
 }

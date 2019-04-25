@@ -1,0 +1,102 @@
+body {
+    min-height: 600px;
+    width: 900px;
+}
+
+.test-div {
+    min-height: 300px;
+    font-size: 40px;
+}
+
+.slider {
+    position: relative;
+    overflow: hidden;
+
+    &__slides {
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: 100%;
+        transition: .5s;
+        transform: translateX(0);
+    }
+
+    &__slide {
+        line-height: 0;
+    }
+
+    &__control-dots {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        display: grid;
+        grid-auto-flow: column;
+        grid-gap: 20px;
+        transition: .2s;
+    }
+
+    &__control-dot {
+        display: block;
+        background-color: rgba($color: green, $alpha: .5);
+        width: 82px;
+        height: 82px;
+        border-radius: 50%;
+        cursor: pointer;
+
+        &:hover {
+            background-color: darken(#4ec6ab, 10%);
+        }
+
+        &:active {
+            background-color: darken(#4ec6ab, 20%);
+        }
+
+        &--active {
+            background-color: black;
+        }
+    }
+
+
+    &__control-dot-preview {
+        display: block;
+        box-sizing: border-box;
+        border: 5px solid black;
+        background-size: 105% 105%;
+        background-position: center center;
+
+        &:hover {
+            background-color: darken(#4ec6ab, 10%);
+        }
+
+        &:active {
+            background-color: darken(#4ec6ab, 20%);
+        }
+        
+
+        &.slider__control-dot--active {
+            border-color: #4ec6ab;
+        }
+    }
+
+    &__btn-prev {
+        display: block;
+        width: 40px;
+        height: 40px;
+        background-color: rgb(0, 247, 255);
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    &__btn-next {
+        display: block;
+        width: 40px;
+        height: 40px;
+        background-color: rgb(0, 247, 255);
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}

@@ -1,0 +1,51 @@
+.subscribe-form {
+    width: 100%;
+    max-width: 540px;
+    position: relative;
+
+
+    &__text-input {
+        @include font-props(16px, -20);
+        color: $subscribe-form-text-color;
+        font-family: $font-open-sans;
+        
+        box-sizing: border-box;
+        border: 2px solid $subscribe-form-border-color;
+        background-color: $subscribe-form-bg-color;
+        border-radius: 5px;
+        height: 60px;
+        padding: 0 93px 0 26px;
+        width: 100%;
+
+        &:active, &:focus {
+            outline: none;
+        }
+    }
+
+    &__submit-btn {
+        padding: 5px 0 0 8px;
+        box-sizing: border-box;
+        width: 93px;
+        height: 60px;
+        border: 2px solid $subscribe-form-border-color;
+        background-color: $subscribe-form-submit-bg-color;
+        border-radius: 5px;
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        &:hover {
+            background-color: darken($subscribe-form-submit-bg-color, 10%);
+        }
+
+        &:active, &:focus {
+            outline: none;
+            background-color: lighten($subscribe-form-submit-bg-color, 10%);
+        }
+    }
+
+    &__submit-arrow {
+        font-size: 48px;
+        color: white; 
+    }
+}

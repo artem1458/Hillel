@@ -1,8 +1,4 @@
-/* eslint-disable guard-for-in */
-/* eslint-disable no-restricted-syntax */
-/* eslint-disable no-param-reassign */
-/* eslint-disable func-names */
-function initializeSliders() {
+(function() {
     const sliders = document.querySelectorAll('.slider');
     for (let node of sliders) {
         createSlider(node);
@@ -17,8 +13,10 @@ function initializeSliders() {
     }
 
     function slideTo(sliderNode, slidesNode, sliderNodeOffsetWidth, n) {
+        const activeDot = sliderNode.querySelectorAll('.slider__control-dot');
         slidesNode.style.transform = `translateX(-${sliderNodeOffsetWidth * n}px)`;
         sliderNode.setAttribute('data-current-slide', n);
+        controlActive(sliderNode, activeDot[n]);
     }
 
     function createControl(sliderNode) {
@@ -27,7 +25,7 @@ function initializeSliders() {
             const sliderControlDots = document.createElement('div');
             sliderControlDots.classList.add('slider__control-dots');
 
-            if(sliderNode.classList.contains('slider--preview')) {
+            if (sliderNode.classList.contains('slider--preview')) {
                 const slidesPreviewCollection = sliderNode.querySelectorAll('.slider__control-dot-preview-img');
                 let paths = [];
                 for (let node of slidesPreviewCollection) {
@@ -36,6 +34,7 @@ function initializeSliders() {
                 for (let i = 0; i < sliderSlideCollection.length; i++) {
                     const btnNode = document.createElement('a');
                     btnNode.classList.add('slider__control-dot-preview');
+                    btnNode.classList.add('slider__control-dot');
                     btnNode.setAttribute('role', 'button');
                     btnNode.setAttribute('data-slide-to', i);
                     btnNode.style.backgroundImage = `url(${paths[i]})`;
@@ -116,7 +115,7 @@ function initializeSliders() {
         }
         const interval = parseFloat(sliderNode.getAttribute('data-slider-change-interval')) * 1000;
         if (interval > 0) {
-            setInterval((changeSlide.bind(null, ['next', sliderNode])), interval);
+            let test = setInterval((changeSlide.bind(null, ['next', sliderNode])), interval);
         } else {
             console.log(RangeError('Warning: value of "data-slider-change-interval" must be above 0'));
         }
@@ -125,31 +124,36 @@ function initializeSliders() {
     function startSlide(sliderNode) {
         if (!sliderNode.getAttribute('data-current-slide')) {
             sliderNode.setAttribute('data-current-slide', '0');
-        } else {
-            let n = parseInt(sliderNode.getAttribute('data-current-slide'), 10) - 1;
-            slideTo(sliderNode, sliderNode.querySelector('.slider__slides'), sliderNode.offsetWidth, n);
+            slideTo(sliderNode, sliderNode.querySelector('.slider__slides'), sliderNode.offsetWidth, 0);
+            return;
         }
+
+        let n = parseInt(sliderNode.getAttribute('data-current-slide'), 10) - 1;
+        slideTo(sliderNode, sliderNode.querySelector('.slider__slides'), sliderNode.offsetWidth, n);
     }
 
     function controlActive(sliderNode, activeDot) {
-        const dots = sliderNode.querySelectorAll('.slider__control-dot');
-        if (activeDot.classList.contains('slider__control-dot')) {
-            for (let node of dots) {
-                node.classList.remove('slider__control-dot--active');
-            }
-            activeDot.classList.add('slider__control-dot--active');
+        if (!sliderNode.classList.contains('slider--control-dots')) {
             return;
         }
-        const dotsPrev = sliderNode.querySelectorAll('.slider__control-dot-preview');
-        for (let node of dotsPrev) {
-            node.classList.remove('slider__control-dot-preview--active');
+        const dots = sliderNode.querySelectorAll('.slider__control-dot');
+        for (let node of dots) {
+            node.classList.remove('slider__control-dot--active');
         }
-        activeDot.classList.add('slider__control-dot-preview--active');
+        activeDot.classList.add('slider__control-dot--active');
     }
-}
 
-function createSlider(sliderNode) {
-    startSlide(sliderNode);
-    createControl(sliderNode);
-    addInterval(sliderNode);
-}
+    function actionResize(sliderNode) {
+        const currentSlide = parseInt(sliderNode.getAttribute('data-current-slide'), 10);
+        slideTo(sliderNode, sliderNode.querySelector('.slider__slides'), sliderNode.offsetWidth, currentSlide);
+    }
+
+    function createSlider(sliderNode) {
+        createControl(sliderNode);
+        addInterval(sliderNode);
+        startSlide(sliderNode);
+        window.addEventListener('resize', () => {
+            actionResize.call(this, sliderNode);
+        });
+    }
+})();

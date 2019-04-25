@@ -1,0 +1,14 @@
+.logo {
+    @include font-props(30px, -20);
+    font-family: $font-roboto;
+    font-weight: 300;
+    color: $logo-color;
+    text-transform: uppercase;
+    user-select: none;
+
+    &__accent {
+        @include text-color-accent;
+        font-weight: 900;
+        font-style: normal;
+    }
+}

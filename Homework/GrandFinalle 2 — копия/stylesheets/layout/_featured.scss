@@ -1,0 +1,20 @@
+.featured {
+    padding-top: 90px;
+    padding-bottom: 64px;
+
+    & .container-max-width {
+        justify-content: center;
+    }
+
+    &__gallery-menu {
+        margin-top: 73px;
+        margin-bottom: 100px;
+    }
+
+    &__product-cards-wrap {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}

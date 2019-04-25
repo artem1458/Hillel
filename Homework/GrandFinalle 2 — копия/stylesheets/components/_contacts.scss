@@ -1,0 +1,77 @@
+.contacts {
+    color: $contacts-text-color;
+    font-family: $font-roboto;
+    font-style: normal;
+
+    &__accent {
+        @include text-color-accent;
+    }
+
+    &__logo {
+        @include font-props(72px, -20);
+        font-weight: 300;
+        user-select: none;
+        margin: 0;
+        line-height: 0.8;
+    }
+
+    &__description {
+        @include font-props(18px, -20);
+        font-weight: 400;
+
+        margin: 24px 0 0 0;
+    }
+
+    &__info {
+        @include font-props(14px, -20);
+        font-weight: 300;
+        line-height: 24px;
+
+        margin: 15px 0 28px 0;
+    }
+
+    &__item {
+        margin: 10px 0;
+    }
+
+    &__type {
+        @include text-color-accent;
+        @include font-props(14px, -20);
+        font-weight: 700;
+    }
+
+    &__value {
+        @include font-props(14px, -20);
+        font-weight: 300;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__social-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 16px;   
+    }
+
+    &__social-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        // margin-right: 10px;
+        margin: 0 10px 5px 0;
+        font-size: 20px;
+        box-sizing: border-box;
+        width: 30px;
+        height: 30px;
+        border: 1px solid;
+        transition: .2s;
+
+        &:hover {
+            background-color: $contacts-social-btn-hover-color;
+            border-color: $contacts-social-btn-hover-color;
+        }
+    }
+}

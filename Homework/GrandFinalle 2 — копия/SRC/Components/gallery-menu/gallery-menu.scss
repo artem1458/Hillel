@@ -1,0 +1,68 @@
+@import "../../../stylesheets/abstracts/variables";
+@import "../../../stylesheets/abstracts/variables";
+@import "../../../stylesheets/abstracts/functions";
+@import "../../../stylesheets/abstracts/mixins";
+@import "../../../stylesheets/base/typography";
+@import "../../../stylesheets/base/base";
+@import "../../../stylesheets/base/normalize";
+
+
+.gallery-menu {
+    margin-top: 80px;
+
+
+
+
+
+    @include flat-list;
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-family: $font-roboto;
+
+    &__item {
+        @include font-props(16px, -20);
+
+        display: block;
+        position: relative;
+        padding: 5px 10px;
+        margin:  7px;
+        color: $gallery-menu__item-text-color;
+        text-transform: uppercase;
+        border: 1px solid $gallery-menu__item-border-color;
+        border-radius: 3px;
+        transition: .2s;
+    }
+
+    &__item::after {
+        content: attr(data-items-count);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        width: 38px;
+        height: 38px;
+        position: absolute;
+        top: -34px;
+        right: -9px;
+        border: 1px solid $gallery-menu__item-counter-border-color;
+        border-radius: 50%;
+        background-color: white;
+        visibility: hidden;
+
+        @include font-props(20px, -20);
+        font-weight: 700;
+        color: $gallery-menu__item-counter-text-color;
+    }
+
+    &__item:hover {
+        color: $gallery-menu__item-text-hover-color;
+        background-color: $gallery-menu__item-bg-hover-color;
+        border-color: $gallery-menu__item-border-hover-color;
+
+        &::after {
+            visibility: visible;
+        }
+    }
+}

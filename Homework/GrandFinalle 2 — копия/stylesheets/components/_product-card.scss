@@ -1,0 +1,200 @@
+.product-card {
+    color: $product-card-text-color;
+    width: 255px;
+    position: relative;
+    margin-bottom: 30px;
+
+    &__image {
+        height: 282px;
+        overflow: hidden;
+    }
+
+    &__overlay-outer {
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 255px;
+        height: 282px;
+        box-sizing: border-box;
+        border: 11px solid $product-card-overlay-outer-color;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: .2s;
+    }
+
+    &__overlay-inner {
+        width: 233px;
+        height: 260px;
+        background-color: $product-card-overlay-inner-color;
+    }
+
+    &__buttons-wrap {
+        opacity: 0;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 166px;
+        margin: 0 auto;
+        position: absolute;
+        top: 90px;
+        left: 45px;
+        transition: .2s;
+    }
+
+    &__footer {
+        @include font-props(18px, -20);
+        display: flex;
+        text-transform: uppercase;
+        font-family: $font-roboto;
+        font-weight: 900;
+    }
+
+    &__name {
+        width: 187px;
+        height: 40px;
+        background-color: $product-card-name-bg-color;
+        display: flex;
+        align-items: center;
+        padding-left: 13px;
+    }
+
+    &__price {
+        width: 55px;
+        height: 40px;
+        background-color: $product-card-price-bg-color;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &::before, &::after {
+        position: absolute;
+        top: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        width: 70px;
+        height: 31px;
+        border: 1px solid black;
+
+        @include font-props (16px, -20);
+        font-family: $font-roboto;
+        color: $product-card--label-text-color;
+        text-transform: uppercase;
+    }
+    
+    &--label-new::before {
+        content: 'new';
+        left: 13px;
+    }
+
+    &--label-sale::after {
+        content: 'sale';
+        right: 13px;
+    }
+
+    &:hover::before, &:hover::after {
+        display: none;
+    }
+}
+
+.product-card__button {
+    @include font-props(30px, -20);
+
+    cursor: pointer;
+    user-select: none;
+    outline: none;
+    
+    color: inherit;
+    font-family: $font-open-sans;
+
+    height: 50px;
+    min-width: 50px;
+    margin-bottom: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    border: 1px solid white;
+    background-color: transparent;
+    transition: .2s;
+
+    &:hover {
+        background-color: $product-card__button-hover-color;
+        border-color: $product-card__button-hover-color;
+    }
+
+    &:active {
+        background-color: $product-card__button-active-color;
+        border-color: $product-card__button-active-color;
+    }
+
+    &--cart {
+        width: 100%;
+        margin: 0;
+        background-color: $product-card__button--cart-bg-color;
+        text-transform: uppercase;
+        justify-content: space-around;
+
+        & span {
+            @include font-props(14px, -20);
+        }
+    }
+}
+
+
+
+.product-card:hover .product-card__overlay-outer,
+.product-card:hover .product-card__buttons-wrap {
+    opacity: 1;
+}
+
+.product-card:hover .product-card__name {
+    background-color: $product-card-name-bg-hover-color;
+}
+
+.product-card:hover .product-card__price {
+    background-color: $product-card-price-bg-hover-color;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .product-card {
+        background-color: $product-card-overlay-inner-color;
+
+        &__overlay-outer {
+            display: none;
+        }
+
+        &__buttons-wrap {
+            flex-wrap: nowrap;
+            position: static;
+            width: 100%;
+            opacity: 1;
+        }
+
+        &__button {
+            background-color: $product-card__button--cart-bg-color;
+            margin: 0;
+            border-right: 1px solid;
+            border-bottom: 2px solid;
+        }
+
+        &:hover::before, &:hover::after {
+            display: flex;
+        }
+    }
+
+    .product-card:hover .product-card__name {
+        background-color: $product-card-name-bg-color;
+    }
+    
+    .product-card:hover .product-card__price {
+        background-color: $product-card-price-bg-color;
+    }
+}

@@ -1,0 +1,76 @@
+.slider-top {
+    &__slide {
+        min-height: 600px;
+        position: relative;
+        text-align: center;
+        padding: 0 100px;
+    }
+
+    &__bg {
+        position: absolute;
+        user-select: none;
+        top: 0;
+        left: 0;
+        height: 100%;
+        min-height: 600px;
+        width: 100%;
+        object-fit: cover;
+        z-index: -1;
+    }
+
+    &__heading {
+        @include font-props(48px, -20);
+        color: $slider-top-text-color;
+        font-weight: 300;
+        font-family: $font-roboto;
+        text-transform: uppercase;
+        margin: -30px 0 5px 0;
+
+    }
+
+    &__heading-accent {
+        color: $text-color-accent;
+        font-weight: 700;
+        font-style: normal;
+    }
+
+    &__description {
+        @include font-props(48px, -20);
+        line-height: 1;
+        font-weight: 400;
+        color: $slider-top-text-color;
+        font-family: $font-open-sans;
+        text-transform: uppercase;
+        margin: 0 0 15px 0;
+    }
+
+    &__description-accent {
+        color: $text-color-accent;
+        font-weight: 600;
+        font-style: normal;
+    }
+
+    &__btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        width: 120px;
+        height: 42px;
+        @include font-props(14px, -20);
+        font-family: $font-roboto;
+        text-transform: uppercase;
+        color: $slider-top-text-color;
+        border: 2px solid $slider-top-btn-bg-color;
+        transition: .2s;
+
+        &:hover {
+            background: $slider-top-btn-bg-color;
+        }
+
+        &:active {
+            background: darken($slider-top-btn-bg-color, 10%);
+            border-color: darken($slider-top-btn-bg-color, 10%);
+        }
+    }
+}

@@ -1,0 +1,100 @@
+$color-palette: (
+    green-mountain-meadow: #1abc9c,
+    green-mountain-meadow-lighten: #4ec6ab,
+    green-bermuda: #7fd9c7,
+    green-puerto-rico: #46bfa9,
+
+    grey: #8c8c8c,
+    grey-dusty: #959595,
+    grey-emperor: #555252,
+    grey-emperor-darken: #515151,
+    grey-mine-shaft: #323232,
+
+    black-diesel: #030000,
+    black-kilamanjaro: #0f0101,
+
+    blue-hawkes: #e9f0fd,
+
+    white-rose: #fffcfc,
+);
+
+$breakpoints: (
+    'small': (max-width: 425px),
+    'medium': (max-width: 800px),
+    'large': (max-width: 1110px)
+);
+
+$text-color-accent: map-get($color-palette, green-mountain-meadow);
+
+$hover-color: map-get($color-palette, green-mountain-meadow); //Удалить
+
+$font-roboto : 'Roboto', sans-serif;
+$font-open-sans : 'Open Sans', sans-serif;
+
+$header-topline-bg-color: map-get($color-palette, green-mountain-meadow);
+$header-topline-text-color: white;
+
+$header-bottomline-text-color: map-get($color-palette, black-kilamanjaro);
+
+$logo-color: map-get($color-palette, grey-emperor);
+
+$card-info-base-color: map-get($color-palette, grey-emperor);
+
+$heading-text-color: map-get($color-palette, grey-emperor-darken);
+$heading-underline-color: map-get($color-palette, green-mountain-meadow);
+
+
+
+$product-card-text-color: white;
+$product-card--label-text-color: map-get($color-palette, grey-emperor);
+$product-card-name-bg-color: map-get($color-palette, grey-mine-shaft);
+$product-card-name-bg-hover-color: map-get($color-palette, green-mountain-meadow);
+$product-card-price-bg-color: map-get($color-palette, grey);
+$product-card-price-bg-hover-color: map-get($color-palette, green-bermuda);
+$product-card-overlay-outer-color: rgba($color: #fff, $alpha: .6);
+$product-card-overlay-inner-color: rgba($color: #000, $alpha: .6);
+$product-card__button-hover-color: map-get($color-palette, green-mountain-meadow);
+$product-card__button-active-color: map-get($color-palette, green-bermuda);
+$product-card__button--cart-bg-color: map-get($color-palette, grey-mine-shaft);
+
+$new-collection-bg-color: map-get($color-palette, blue-hawkes);
+
+$gallery-menu__item-text-color: map-get($color-palette, grey-emperor);
+$gallery-menu__item-border-color: map-get($color-palette, grey-dusty);
+$gallery-menu__item-text-hover-color: white;
+$gallery-menu__item-bg-hover-color: map-get($color-palette, green-mountain-meadow);
+$gallery-menu__item-border-hover-color: map-get($color-palette, green-mountain-meadow);
+$gallery-menu__item-counter-text-color: map-get($color-palette, green-mountain-meadow);
+$gallery-menu__item-counter-border-color: map-get($color-palette, grey-mine-shaft);
+
+$sale-season-text-color: white;
+
+$best-sellers-bg-color: map-get($color-palette, blue-hawkes);
+
+$newsletter-text-color: white;
+$newsletter-heading__underline-color: white;
+
+$subscribe-form-bg-color: white;
+$subscribe-form-border-color: white;
+$subscribe-form-submit-bg-color: map-get($color-palette, green-mountain-meadow-lighten);
+$subscribe-form-text-color: map-get($color-palette, grey-mine-shaft);
+
+$partners-bg-color: map-get($color-palette, blue-hawkes);
+
+$partner-card-border-color: map-get($color-palette, green-mountain-meadow-lighten);
+
+$news-card-text-color: map-get($color-palette, grey-emperor);
+$news-card-heading-underline-color: map-get($color-palette, green-mountain-meadow-lighten);
+$news-card-more-bg-color: map-get($color-palette, green-mountain-meadow-lighten);
+
+$feedback-heading-text-color: white;
+
+$contacts-text-color: white;
+
+$contacts-social-btn-hover-color: map-get($color-palette, green-puerto-rico);
+
+$feedback-form-text-color: white;
+$feedback-form-text-color-focus: map-get($color-palette, green-puerto-rico);
+$feedback-form-submit-btn-bg-color: map-get($color-palette, green-puerto-rico);
+
+

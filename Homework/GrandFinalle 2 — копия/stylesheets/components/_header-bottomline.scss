@@ -1,0 +1,30 @@
+.header-bottomline {
+    font-family: $font-open-sans;
+    color: $header-bottomline-text-color;
+
+    & .container-max-width {
+        align-items: center;
+        padding: 30px 0 25px 0;
+    }
+
+}
+
+.header-bottomline-nav {
+    @include flat-list;
+    @include font-props(14px, -20);
+
+    font-weight: 700;
+    text-transform: uppercase;
+
+    &__item {
+        transition: color .2s;
+
+        &:not(:first-child){
+            margin-left: 32px;
+        }
+
+        &:hover {
+            color: $hover-color;
+        }
+    }
+}

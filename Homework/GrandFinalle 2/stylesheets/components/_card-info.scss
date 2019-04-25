@@ -1,0 +1,37 @@
+.card-info {
+    text-align: center;
+    max-width: 255px;
+    font-family: $font-open-sans;
+    color: $card-info-base-color;
+
+    @include respond-to('large') {
+        margin-bottom: 10px;
+    }
+
+    &__link {
+        display: block;
+        transition: color .2s;
+
+        &:hover {
+            color: $card-info-hover-color;
+        }
+    }
+
+    &__image {
+        font-size: 70px;
+    }
+
+    &__heading {
+        @include font-props(18px, -20);
+        font-weight: 600;
+        text-transform: uppercase;
+        margin-top: 39px;
+        margin-bottom: 21px;
+    }
+
+    &__paragraph {
+        @include font-props(14px, -20);
+        line-height: 24px;
+        font-weight: 300;
+    }
+}

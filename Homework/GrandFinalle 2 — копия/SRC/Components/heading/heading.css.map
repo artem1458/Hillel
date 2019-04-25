@@ -1,0 +1,13 @@
+{
+    "version": 3,
+    "mappings": "AIAA,OAAO,CAAC,yJAAI;AJMP,AAAD,cAAO,CAAC;EGMR,SAAS,EHLe,IAAI;EGM5B,cAAc,EDZN,OAAuC;EFO3C,WAAW,ECsBJ,QAAQ,EAAE,UAAU;EDrB3B,KAAK,ECAY,OAAO;EDCxB,UAAU,EAAE,MAAM;EAClB,cAAc,EAAE,SAAS;EACzB,WAAW,EAAE,GAAG;EAChB,MAAM,EAAE,CAAC;EACT,cAAc,EAAE,IAAI;EACpB,WAAW,EAAE,IAAI;CAKpB;;AAHG,MAAM,CAAC,MAAM,MAAM,SAAS,EAAE,KAAK;EAXtC,AAAD,cAAO,CAAC;IGMR,SAAS,EHMmB,IAAI;IGLhC,cAAc,EDZN,OAAuC;GFmB9C;;;AAEA,AAAD,mBAAY,CAAC;EACT,MAAM,EAAE,MAAM;EACd,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,GAAG;EACX,gBAAgB,ECzBG,OAAO;ED0B1B,UAAU,EAAE,qBAAqB;EACjC,aAAa,EAAE,qBAAqB;EACpC,eAAe,EAAE,WAAW;CAC/B;;AAEA,AAAD,wBAAiB,CAAC;EACd,MAAM,EAAE,GAAG;EACX,MAAM,EAAE,IAAI;CACf",
+    "sources": [
+        "heading.scss",
+        "../../../stylesheets/abstracts/_variables.scss",
+        "../../../stylesheets/abstracts/_functions.scss",
+        "../../../stylesheets/abstracts/_mixins.scss",
+        "../../../stylesheets/base/_typography.scss"
+    ],
+    "names": [],
+    "file": "heading.css"
+}

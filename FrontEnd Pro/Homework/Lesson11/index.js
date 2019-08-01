@@ -1,6 +1,6 @@
 const user = {
-  name: 'Fedor',
-  surname: 'Ivanov',
+  name: 'mykola',
+  age: 56,
 };
 
 function swapKeys(obj) {
